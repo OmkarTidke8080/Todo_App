@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is a simple todo application",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmkarTidke8080/practice.git"
+  },
+  "author": "Omkar Tidke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmkarTidke8080/practice/issues"
+  },
+  "homepage": "https://github.com/OmkarTidke8080/practice#readme"
+}
