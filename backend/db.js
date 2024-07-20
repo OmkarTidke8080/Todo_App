@@ -8,16 +8,23 @@ titl}
 import mongoose from "mongoose";
 import { string } from "zod";
 
-const URL = "mongodb://localhost:27017/todo";
+mongoose.connect("mongodb://localhost:27017/todo");
 
-mongoose.connect(URL, () => {
-  console.log("Mongo Db Connected");
+const todoSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  }, 
+  completed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const todoSchema = mongoose.Schema({
-  title: String,
-  description: String,
-  completed: Boolean,
-});
+const Todo = mongoose.model("Todo", todoSchema);
 
-export const todo = mongoose.model("todos", todoSchema);
+export default Todo;

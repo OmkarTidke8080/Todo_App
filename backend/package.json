@@ -20,6 +20,7 @@
   "homepage": "https://github.com/OmkarTidke8080/practice#readme",
   "dependencies": {
     "express": "^4.19.2",
+    "mongoose": "^8.5.1",
     "nodemon": "^3.1.4",
     "zod": "^3.23.8"
   }
