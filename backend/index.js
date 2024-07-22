@@ -2,9 +2,15 @@
 import express from "express";
 // import mongoose from "mongoose";
 import Todo from "./db.js";
+import cors from "cors";
 import { createTodo, updateTodo } from "./type.js"; // Ensure these are correctly defined
 
 const app = express();
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 const port = 3000;
 app.use(express.json());
 
@@ -40,10 +46,10 @@ app.post("/todo", async function (req, res) {
 });
 
 app.get("/todos", async function (req, res) {
-  const todos = await Todo.find({});
-  console.log(todos); // promise
+  // const todos = await Todo.find({});
+  // console.log(todos); // promise
   res.json({
-    todos,
+    todos: [],
   });
 });
 
